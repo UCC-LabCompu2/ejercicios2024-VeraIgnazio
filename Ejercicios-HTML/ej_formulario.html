@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Ejercicio Formulario</title>
@@ -20,45 +20,45 @@
 <h3>Suscribase a Nuestro Portal de Noticias! Crear una cuenta es rápido!</h3>
 <form id="formulario_subscripcion">
     <p>
-        Nombre: <input type="text" name="Nombre" placeholder="Nombre">
+        <label for="nombre">Nombre:</label> <input type="text" name="Nombre" placeholder="Nombre"id="nombre">
     </p>
     <p>
-        Apellido: <input type="text" name="Apellido" placeholder="Apellido">
+        <label for="apellido"> Apellido:</label> <input type="text" name="Apellido" placeholder="Apellido"id="apellido">
     </p>
     <p>
-        Sexo: Masculino <input type="radio" name="sexo" value="Masculino">
-              Femenino  <input type="radio" name="sexo" value="Femenino">
-              Prefiero no revelarlo <input type="radio" name="sexo" value="Prefiero no revelarlo">
+        Sexo: <label for="masculino">Masculino</label> <input type="radio" name="sexo" value="Masculino"id="masculino">
+        <label for="femenino">Femenino</label> <input type="radio" name="sexo" value="Femenino"id="femenino">
+        <label for="prefiero_no_revelarlo"> Prefiero no revelarlo</label> <input type="radio" name="sexo" value="Prefiero_no_revelarlo"id="prefiero_no_revelarlo">
     </p>
     <p>
-        Edad: <input type="number" name="Edad" placeholder="Edad">
+        <label for="edad">Edad:</label> <input type="number" name="Edad" placeholder="Edad"id="edad">
     </p>
     <p>
-        Email: <input type="email" name="Email" placeholder="email@dominio.com">
+        <label for="email">Email:</label> <input type="email" name="Email" placeholder="email@dominio.com"id="email">
     </p>
     <p>
-        Usuario:<input type="text" name="Usuario" placeholder="Usuario">
+        <label for="usuario">Usuario:</label><input type="text" name="Usuario" placeholder="Usuario"id="usuario">
     </p>
     <p>
-        Password:<input type="password" name="Pass" placeholder="Password">
+        <label for="password">Password:</label><input type="password" name="Pass" placeholder="Password"id="password">
     </p>
     <p>
-        Confirmar Password:<input type="password" name="Confirmar" placeholder="Password">
+        <label for="confirm_password">Confirmar Password:</label><input type="password" name="Confirmar" placeholder="Password"id="confirm_password">
     </p>
     <p>
-        Tipo de servicio: Free <input type="checkbox" name="Tipo_de_Servicio" value="Free"> Standard / Premium
-    </p>                  Standard <input type="checkbox" name="Tipo_de_Servicio" value="Standard">
-                          Premium <input type="checkbox" name="Tipo_de_Servicio" value="Premium">
+        Tipo de servicio:  <label for="free">Free </label><input type="checkbox" name="Tipo_de_Servicio" value="Free"id="free">
+    </p>                   <label for="standard">Standard</label><input type="checkbox" name="Tipo_de_Servicio" value="Standard"id="standard">
+                           <label for="premium">Premium</label><input type="checkbox" name="Tipo_de_Servicio" value="Premium"id="premium">
 <p>
-Tema:
-<select>
+    <label for="tema">Tema:</label>
+<select id="tema">
     <option>Negocios</option>
     <option>Tecnología</option>
     <option>Salud</option>
 </select>
 </p>
 <p>
-Agregue un comentario:<textarea></textarea>
+    <label for="comentario">Agregue un comentario:</label><textarea id="comentario"></textarea>
 </p>
     <button type="button"> Boton de Enviar </button>
 </form>
