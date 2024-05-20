@@ -40,7 +40,14 @@ function CambiarUnidades(id, valor) {
             rad=document.getElementById (elementld"radianes").value;
             grad = (rad*180)/Math.PI;
         }
-        document.getElementById(elementld:"grados").value=grad;
-        document.getElementById(elementld:"radianes").value=rad;
+        document.getElementById("grados").value=grad;
+        document.getElementById("radianes").value=rad;
+    }
+}
+let mostrarOcultar = (valor) => {
+    if (valorMO === "val_mostrar") {
+        document.getElementById("divMO").style.display = block;
+    } else if (valorMO === "val_ocultar") {
+        document.getElementById("divMO").style.display = none;
     }
 }
