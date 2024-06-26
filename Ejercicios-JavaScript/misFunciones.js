@@ -1,9 +1,9 @@
 /**
  * Conversion de unidades metros, yardas, pies y pulgadas
  * @method cambiarUnidades
- * @param {string} id - El id de los metros, yardas, pies o pulgadas
- * @param (number valor - El valor de los inputs de los metros, yardas, pies o pulgadas
- * @return Valor que retorna
+ * @param {string} id - El id de los inputs de metros, yardas o pulgadas
+ * @param {number} valor - El valor de los inputs de metros, yardas o pulgadas
+ * @return
  */
 function CambiarUnidades(id, valor) {
     if (isNaN(valor)) {
@@ -12,22 +12,22 @@ function CambiarUnidades(id, valor) {
         document.lasUnidades.unid_pulgada.value = "";
         document.lasUnidades.unid_pie.value = "";
         document.lasUnidades.unid_yarda.value = "";
-    } else if (id == "metro") {
+    } else if (id === "metro") {
         document.lasUnidades.unid_pulgada.value = 39.3701 * valor;
         document.lasUnidades.unid_pie.value = 3.28084 * valor;
         document.lasUnidades.unid_yarda.value = 1.09361 * valor;
-    } else if (id == "pulgada") {
+    } else if (id === "pulgada") {
+        document.lasUnidades.unid_metro.value = 0.0245 * valor;
+        document.lasUnidades.unid_pie.value = 0.0833333 * valor;
+        document.lasUnidades.unid_yarda.value = 0.0277777 * valor;
+    } else if (id === "`pie`") {
         document.lasUnidades.unid_metro.value = 39.3701 * valor;
-        document.lasUnidades.unid_pie.value = 3.28084 * valor;
+        document.lasUnidades.unid_pulgada.value = 3.28084 * valor;
         document.lasUnidades.unid_yarda.value = 1.09361 * valor;
-    } else if (id == "`pie`") {
-        document.lasUnidades.unid_metro.value = 39.3701 * valor;
-        document.lasUnidades.unid_pie.value = 3.28084 * valor;
-        document.lasUnidades.unid_yarda.value = 1.09361 * valor;
-    } else if (id == "yarda") {
-        document.lasUnidades.unid_pulgada.value = 39.3701 * valor;
-        document.lasUnidades.unid_pie.value = 3.28084 * valor;
-        document.lasUnidades.unid_yarda.value = 1.09361 * valor;
+    } else if (id === "yarda") {
+        document.lasUnidades.unid_pulgada.value = 0.9144 * valor;
+        document.lasUnidades.unid_pie.value = 36 * valor;
+        document.lasUnidades.unid_metro.value = 4 * valor;
     }
 }
 {
@@ -44,10 +44,15 @@ function CambiarUnidades(id, valor) {
         document.getElementById("radianes").value=rad;
     }
 }
-let mostrarOcultar = (valor) => {
-    if (valorMO === "val_mostrar") {
-        document.getElementById("divMO").style.display = block;
-    } else if (valorMO === "val_ocultar") {
-        document.getElementById("divMO").style.display = none;
+function mostrarOcultar (valorMO){
+    if (valorMO=="val_mostrar"){
+        document.getElementById("divMO").style.display = 'block';
+    }else if (valorMO=="val_ocultar"){
+        document.getElementById("divMO").style.display = 'none';
     }
+
+}
+function dibujarCirculoCuadrado():void{
+    const canvas html element
+
 }
