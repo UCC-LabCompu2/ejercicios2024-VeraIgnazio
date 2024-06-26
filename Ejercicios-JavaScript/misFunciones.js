@@ -44,6 +44,12 @@ function CambiarUnidades(id, valor) {
         document.getElementById("radianes").value=rad;
     }
 }
+/**
+ * Mostrar y ocultar div
+ * @method MostrarOcultar
+ * @param {valorMO} valor - valor del radio seleccionado
+ * @return
+ */
 function mostrarOcultar (valorMO){
     if (valorMO=="val_mostrar"){
         document.getElementById("divMO").style.display = 'block';
