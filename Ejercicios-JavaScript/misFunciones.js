@@ -6,29 +6,43 @@
  * @return
  */
 function CambiarUnidades(id, valor) {
+    var metro, pulgada, pie, yarda;
+
+    if (valor.includes(",")){
+        valor = valor.replace(",",".");
+    }
+
     if (isNaN(valor)) {
         alert("Se ingresó un valor inválido " + id);
-        document.lasUnidades.unid_metro.value = "";
-        document.lasUnidades.unid_pulgada.value = "";
-        document.lasUnidades.unid_pie.value = "";
-        document.lasUnidades.unid_yarda.value = "";
+        metro = "";
+        pulgada = "";
+        pie = "";
+        yarda = "";
     } else if (id === "metro") {
-        document.lasUnidades.pulgada.value = valor * 39.3701;
-        document.lasUnidades.pie.value = valor * 3.28084;
-        document.lasUnidades.yarda.value = valor * 1.09361;
-    } else if (unidad === "pulgada") {
-        document.lasUnidades.metro.value = valor * 0.0254;
-        document.lasUnidades.pie.value = valor * 0.08333;
-        document.lasUnidades.yarda.value = valor * 0.027778;
-    } else if (unidad === "pie") {
-        document.lasUnidades.metro.value = valor * 0.3048;
-        document.lasUnidades.pulgada.value = valor * 12;
-        document.lasUnidades.yarda.value = valor * 0.333333;
-    } else if (unidad === "yarda") {
-        document.lasUnidades.metro.value = valor * 0.9144;
-        document.lasUnidades.pulgada.value = valor * 36;
-        document.lasUnidades.pie.value = valor * 3;
+        metro = valor;
+        pulgada = valor * 39.3701;
+        pie= valor * 3.28084;
+        yarda = valor * 1.09361;
+    } else if (id === "pulgada") {
+        pulgada = valor;
+        metro = valor * 0.0254;
+        pie= valor * 0.08333;
+        yarda= valor * 0.027778;
+    } else if (id === "pie") {
+        pie = valor;
+        metro = valor * 0.3048;
+        pulgada= valor * 12;
+        yarda= valor * 0.333333;
+    } else if (id === "yarda") {
+        yarda = valor;
+        metro= 0.9144 * valor;
+        pulgada= 36 * valor;
+        pie= 3 * valor;
     }
+    document.lasUnidades.unid_metro.value = Math.round(metro*100)/100;
+    document.lasUnidades.unid_pulgada.value = Math.round(pulgada*100)/100;
+    document.lasUnidades.unid_pie.value = Math.round(pie*100)/100;
+    document.lasUnidades.unid_yarda.value = Math.round(yarda*100)/100;
 }
 {
     function ConvertirGR(id) {
